@@ -1,5 +1,10 @@
 # PyShell - Shellify Your HTTP Command Injection!
 
+This fork of PyShell allows PyShell to be reused for arbitrary HTTP command injection
+situations, not just PHP. Simply write the request code, import and initialize a PyShell
+object, and pass it your function. Then, all of the existing PyShell magic will work for
+you!
+
 Firewall got you down? Are your reverse-shell connection attempts being
 filtered? Are you stuck working solely over HTTP / HTTPS? Then this just might
 be just the thing for you.
@@ -9,7 +14,7 @@ painful. The goal is to make it feel as much like an interactive shell as
 possible. Commands are base-64 encoded to help deal with WAFs, and are submitted
 as POST requests to be less visible in request logs.
 
-Usage is `python3 pyshell.py URL` where URL points to a script which performs
+For the example PHP shell, usage is `python3 pyshell-php.py URL` where URL points to a script which performs
 the command injection, something like this:
 
 ```
